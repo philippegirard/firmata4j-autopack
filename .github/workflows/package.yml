@@ -11,7 +11,7 @@ jobs:
            with:
                java-version: '11'
                distribution: 'adopt'
-         - run: mvn --batch-mode --update-snapshots verify
+         - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
          - run: mkdir release && cp target/*.jar release
          - uses: actions/upload-artifact@v2
            with:
