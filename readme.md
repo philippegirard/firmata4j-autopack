@@ -1,5 +1,5 @@
 # Why this repository?
-I was using https://github.com/kurbatov/firmata4j awesome project to interface a Arduino device with Java code. However, there was two shortcoming:
+https://github.com/kurbatov/firmata4j is an awesome. However, there was two shortcoming when I tried to use it on Windows:
 1. Cannot download a .jar with all the dependencies packaged in it. This is useful when you don't use maven for your java project and just want to import a .jar lib into your project. 
 2. I needed a more recent release than what was published on the Maven central repository. (https://github.com/kurbatov/firmata4j/issues/48)
 
