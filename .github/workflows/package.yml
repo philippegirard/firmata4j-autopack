@@ -9,15 +9,13 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
-      - name: create release folder
-        run: mkdir ${{ steps.date.outputs.date }}
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
       - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
-      - run: mkdir ${{ steps.date.outputs.date }} && cp target/*jar-with-dependencies.jar ${{ steps.date.outputs.date }}
+      - run: mkdir -p ${{ steps.date.outputs.date }} && cp target/*jar-with-dependencies.jar $_
       - uses: actions/upload-artifact@v2
         with:
           name: firmata4j-autopack
