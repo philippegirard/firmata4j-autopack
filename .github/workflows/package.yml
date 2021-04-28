@@ -1,23 +1,23 @@
 name: PackageJar
 
-on: [push]
+on: [ push ]
 
 jobs:
-   build:
-      runs-on: ubuntu-latest
-      steps:
-         - uses: actions/checkout@v2
-         - uses: actions/setup-java@v2
-           with:
-               java-version: '11'
-               distribution: 'adopt'
-         - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
-         - run: mkdir release && cp target/*jar-with-dependencies.jar release
-         - uses: actions/upload-artifact@v2
-           with:
-               name: firmata4j-autopack
-               path: release
-         - uses: stefanzweifel/git-auto-commit-action@v4
-           with:
-             commit_message: Update Target Folder with new release
-             file_pattern: *.jar
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
+      - run: mkdir release && cp target/*jar-with-dependencies.jar release
+      - uses: actions/upload-artifact@v2
+        with:
+          name: firmata4j-autopack
+          path: release
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Target Folder with new release
+          file_pattern: "*.jar"
