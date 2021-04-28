@@ -41,4 +41,4 @@ You can see all firmata4j's commits here: https://github.com/kurbatov/firmata4j/
 See [docs/why.md](/docs/why.md)
 
 # Need a new release?
-Open an issue, this will trigger a github action that will package the .jar with all the dependencies from latest commit in the date of today. The Github release tab will be updated with the new .jar.
+Open an issue, this will trigger a github action that will package the .jar with all the dependencies from latest commit in the date of today. 
