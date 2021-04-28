@@ -1,5 +1,5 @@
 # What is this project?
-This project package [firmata4j](https://github.com/kurbatov/firmata4j) 
+This project packages [firmata4j](https://github.com/kurbatov/firmata4j) 
 into a jar file with all it's dependencies.
 It uses the latest commit on the master branch when compiling firmata4j.
 
