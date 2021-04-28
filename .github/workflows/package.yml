@@ -16,6 +16,7 @@ jobs:
           distribution: 'adopt'
       - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
       - run: mkdir -p releases/${{ steps.date.outputs.date }} && cp target/*jar-with-dependencies.jar $_
+      - run: mkdir -p releases/${{ steps.date.outputs.date }}/separated && mvn dependency:copy-dependencies -DoutputDirectory=releases/${{ steps.date.outputs.date }}/separated -Dhttps.protocols=TLSv1.2
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Releases Folder with new release
