@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-
+Just click "Submit new Issue"
