@@ -1,6 +1,9 @@
 name: PackageJar
 
-on: [ push ]
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
 
 jobs:
   build:
