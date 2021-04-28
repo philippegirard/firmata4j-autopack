@@ -9,7 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: peter-evans/close-issue@v1
+      - run: echo
+      - name: Close issue ${{ github.event_name }}
+        if: github.event_name == 'issue'
+        uses: peter-evans/close-issue@v1
         with:
           comment: |
             Thank you. Processing your request. The release should be available in the /release folder in 1 minute.
