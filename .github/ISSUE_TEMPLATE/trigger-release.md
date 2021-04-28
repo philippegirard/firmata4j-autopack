@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-Just click "Submit new Issue"
+Just click "Submit new Issue" and wait for 1 minute.
