@@ -12,7 +12,7 @@ jobs:
                java-version: '11'
                distribution: 'adopt'
          - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
-         - run: mkdir release && cp target/*.jar release
+         - run: mkdir release && cp target/*jar-with-dependencies.jar release
          - uses: actions/upload-artifact@v2
            with:
                name: Package
