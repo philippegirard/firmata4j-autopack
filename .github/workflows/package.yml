@@ -12,7 +12,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
-      - run: mkdir release && cp target/*jar-with-dependencies.jar release
+      - run: cp target/*jar-with-dependencies.jar releases
       - uses: actions/upload-artifact@v2
         with:
           name: firmata4j-autopack
@@ -21,3 +21,4 @@ jobs:
         with:
           commit_message: Update Target Folder with new release
           file_pattern: "*.jar"
+
