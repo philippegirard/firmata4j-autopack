@@ -15,7 +15,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - run: mvn assembly:assembly -DdescriptorId=jar-with-dependencies
-      - run: mkdir -p ${{ steps.date.outputs.date }} && cp target/*jar-with-dependencies.jar $_
+      - run: mkdir -p releases/${{ steps.date.outputs.date }} && cp target/*jar-with-dependencies.jar $_
       - uses: actions/upload-artifact@v2
         with:
           name: firmata4j-autopack
