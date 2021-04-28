@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo
-      - name: Close issue ${{ github.event_name }}
-        if: github.event_name == 'issue'
+      - run: echo ${{ github.event_name }}
+      - name: Close issue
+        if: github.event_name == 'issues'
         uses: peter-evans/close-issue@v1
         with:
           comment: |
