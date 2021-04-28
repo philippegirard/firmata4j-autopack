@@ -19,6 +19,8 @@ For example if you have: firmata4j-master-firmata4j-2.3.8-g**9de0fd9**-12.jar
 The commit hash would be: **9de0fd9**
 
 You can see all firmata4j's commits here: https://github.com/kurbatov/firmata4j/commits
+![image](https://user-images.githubusercontent.com/8143308/116429782-34962700-a814-11eb-8f74-3ff6fb1f1eb5.png)
+
 # Why this repository?
 See [docs/why.md](/docs/why.md)
 
